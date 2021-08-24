@@ -7,6 +7,7 @@ FROM golang:alpine
 # Install MailHog:
 RUN apk --no-cache add --virtual build-dependencies \
     git \
+    build-base \
   && mkdir -p /root/gocode \
   && export GOPATH=/root/gocode \
   && go get github.com/mailhog/MailHog \
